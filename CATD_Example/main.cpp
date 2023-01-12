@@ -35,6 +35,7 @@ namespace yyycz {
 int main() {
 	using namespace yyycz;
 
+	// Tuple = std::tuple
 	Tuple<int, float, double> tpl1(1, 2, 3);
 	Tuple<double, char, int> tpl2(2, 1, 1);
 	Tuple<float, bool> tpl3(3, true);
@@ -52,7 +53,8 @@ int main() {
 	is_same_in_tuples(tpl1, tpl2, tpl4);
 
 	// 3. 没有类型匹配，推导失败
-	is_same_in_tuples(tpl1, tpl2, tpl3, tpl4);
+	is_same_in_tuples(tpl1, tpl2, tpl3);
+	is_same_in_tuples(tpl2, tpl3, tpl4);
 
 	return 0;
 }
